@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>藍新金流</title>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
+    </head>
+    <body>
+        <p>{{.pageContent}}</p>
+
+        <form id="form1" action="{{.action}}" method="post">
+            <input type="text" id="MerchantID" name="MerchantID" value="{{.merchantID}}" style="display:none">
+            <input type="text" id="TradeInfo" name="TradeInfo" value="{{.tradeInfo}}" style="display:none">
+            <input type="text" id="TradeSha" name="TradeSha" value="{{.tradeSha}}" style="display:none">
+            <input type="text" id="Version" name="Version" value="{{.version}}" style="display:none">
+        </form>
+
+        <script>
+            $(document).ready(function(){
+                $('#form1').submit(); 
+            });
+        </script>
+    </body>
+</html>
